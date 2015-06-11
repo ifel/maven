@@ -1,5 +1,5 @@
 export M2_HOME=<%= node['maven']['m2_home'] %>
 
-<% if node['maven']['mavenrc']['opts'] -%>
+<% if node['maven']['mavenrc']['opts'] and not node['maven']['mavenrc']['opts'].empty? -%>
 export MAVEN_OPTS="<%= node['maven']['mavenrc']['opts'] %>"
 <% end -%>
